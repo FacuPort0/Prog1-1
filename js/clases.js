@@ -13,6 +13,13 @@ class Sistema {
   agregarVenta(unaVenta) {
     this.ventas.push(unaVenta);
   }
+  ventaMedio(){
+    for (let cantidadMedio of sistema.cantidad) {
+    if (this.medio === cantidadMedio.medio) {
+      cantidadMedio.cantidad += this.cantidad;
+    }
+  }
+}
 }
 
 class Influencer {
@@ -41,3 +48,4 @@ class Venta {
     this.total = articulo.precio * cantidad;
   }
 }
+

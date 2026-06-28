@@ -42,6 +42,52 @@ td {
   border: 1px solid #000;
   padding: 8px;
 }
+
+#graficoBurbujas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  min-height: 150px;
+}
+
+.burbujas {
+  height: var(--circle-diameter);
+  width: var(--circle-diameter);
+  border-radius: 50%;
+  --circle-diameter: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+#graficoInstagram{
+  background-color: rgb(94, 12, 94);
+}
+
+#graficoYouTube{
+  background-color: red;
+}
+
+#graficoTikTok{
+  background-color: black;
+}
+
+#graficoFacebook{
+  background-color: blue;
+}
+
+#graficoX{
+  background-color: rgb(77, 34, 34);
+}
+
+#graficoOtras{
+  background-color: grey;
+}
+
 footer {
   padding: 20px 0px;
   width: 100%;

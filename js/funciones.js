@@ -138,6 +138,7 @@ function cargar() {
       ];
     }),
   );
+  generarGraficoBurbujas();
 }
 
 function mostrarDetallesVentas(nombreInfluencer) {
@@ -279,8 +280,64 @@ function agregarVenta(evt) {
     );
     sistema.agregarVenta(nuevaVenta);
     cargar();
+    generarGraficoBurbujas();
   }
   document.getElementById("formVentas").reset();
   cerrarVentas();
 }
-ESTO ES UNA PRUEBA
+
+function generarGraficoBurbujas() {
+  let totalInstagram = 0;
+  let totalYouTube = 0;
+  let totalTikTok = 0;
+  let totalFacebook = 0;
+  let totalX = 0;
+  let totalOtras = 0;
+
+  for (let venta of sistema.ventas) {
+    if (venta.medio === "1 - Instagram" || venta.medio === "1-Instagram") {
+      totalInstagram += venta.cantidad;
+    } else if (venta.medio === "2 - YouTube" || venta.medio === "2-YouTube") {
+      totalYouTube += venta.cantidad;
+    } else if (venta.medio === "3 - TikTok" || venta.medio === "3-TikTok" || venta.medio === "3-Tiktok") { 
+      totalTikTok += venta.cantidad;
+    } else if (venta.medio === "4 - Facebook" || venta.medio === "4-Facebook") {
+      totalFacebook += venta.cantidad;
+    } else if (venta.medio === "5 - X" || venta.medio === "5-X") {
+      totalX += venta.cantidad;
+    } else if (venta.medio === "6 - Otras" || venta.medio === "6-Otras") {
+      totalOtras += venta.cantidad;
+    }
+  }
+
+  let sumaTotalGeneral = totalInstagram + totalYouTube + totalTikTok + totalFacebook + totalX + totalOtras;
+
+  actualizarUnaBurbuja("graficoInstagram", totalInstagram, sumaTotalGeneral);
+  actualizarUnaBurbuja("graficoYouTube", totalYouTube, sumaTotalGeneral);
+  actualizarUnaBurbuja("graficoTikTok", totalTikTok, sumaTotalGeneral);
+  actualizarUnaBurbuja("graficoFacebook", totalFacebook, sumaTotalGeneral);
+  actualizarUnaBurbuja("graficoX", totalX, sumaTotalGeneral);
+  actualizarUnaBurbuja("graficoOtras", totalOtras, sumaTotalGeneral);
+}
+
+function actualizarUnaBurbuja(idElemento, cantidadTotal, sumaTotalGeneral) {
+  let elementoBurbuja = document.getElementById(idElemento);
+
+  if (elementoBurbuja) {
+    if (cantidadTotal > 0) {
+      let tamañoMaximoPx = 150; 
+      let nuevoDiametro = (cantidadTotal / sumaTotalGeneral) * tamañoMaximoPx;
+
+      if (nuevoDiametro < 30) {
+        nuevoDiametro = 30;
+      }
+
+      elementoBurbuja.style.setProperty('--circle-diameter', nuevoDiametro + 'px');
+      elementoBurbuja.innerHTML = cantidadTotal;
+      elementoBurbuja.style.display = "flex"; 
+    } else {
+      elementoBurbuja.innerHTML = "";
+      elementoBurbuja.style.display = "none"; 
+    }
+  }
+}
