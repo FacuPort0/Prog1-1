@@ -1,0 +1,33 @@
+LISTA DE CORRECCIONES REQUERIDAS (En base a la rúbrica de evaluación)
+
+1. Documentación (Puntos: 0 / 0.4)
+   - Falta el archivo PDF. (Comentario: "no hay pdf") Corregido
+
+2. Nombre de autor en código (Puntos: 0 / 0.5)
+   - No se colocaron los nombres de los estudiantes como comentario en el archivo HTML o CSS. (Comentario: "no coloca nombres") CORREGIDO
+
+3. Ortografía (Puntos: 0.25 / 0.5)
+   - Se encontraron faltas de ortografía. (Comentario: "faltan tildes en algunas palabras")
+
+4. Organización de archivos entregados (Puntos: 0.15 / 0.3)
+   - El archivo 'estilos.css' no se encuentra guardado dentro de la carpeta correspondiente. (Comentario: "estilos.css no está en carpeta") CORREGIDO
+
+5. Pie de página (Puntos: 0.2 / 0.4)
+   - El texto o la ubicación del pie de página no coincide con lo que se presentó en el video explicativo. (Comentario: "No coincide texto ni ubicación con lo presentado en el video")
+
+6. Formulario de alta de influencer (Puntos: 0.25 / 0.5)
+   - No se utilizó el elemento 'form'. Falta implementar el formulario para dar de alta un Influencer. (Comentario: "No usan form. Falta Influencer") Comentarios
+
+7. Tabla de influencers (Puntos: 0.3 / 0.6)
+   - La información se presenta en negrita, faltan los iconos y el texto hace referencia errónea a "artículos" en lugar de influencers. (Comentario: "Info en negrita, sin iconos y hablando de artículos")
+
+8. Formulario de alta de artículo (Puntos: 0.25 / 0.5)
+   - No se utilizaron los elementos 'form' de HTML para este formulario. (Comentario: "No usa forms")
+
+9. Formulario de alta de venta (Puntos: 0.25 / 0.5)
+   - Falta la estructura 'form'.
+   - Falta el elemento 'select' de medio con todos sus componentes correspondientes.
+   - Falta incluir el número correspondiente.
+   - La palabra "venta" debe ir en minúscula.
+   - El label del número y del artículo se encuentran en una misma línea o elemento.
+   (Comentario exacto: "Falta form, select de medio sin todos los elementos y sin el nro correspondiente. venta en minúscula. label de nro y artículo en una misma.")
